@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+
+}
+
+body {
+    position: relative; /* Add this to make the ::before pseudo-element relative to the body */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(/images/background.jpg) center/cover;
+}
+
+/* Create a pseudo-element to act as an overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) to control opacity */
+}
+
+
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(94, 255, 0), 0 0 30px rgb(255, 255, 0), 0 0 40px rgb(0, 128, 0), 0 0 50px rgb(0, 0, 255), 0 0 60px rgb(75, 0, 130), 0 0 70px rgb(238, 130, 238), 0 0 80px rgb(255, 0, 255), 0 0 90px rgb(255, 0, 0);
+    }
+    50% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(94, 255, 0), 0 0 30px rgb(255, 255, 0), 0 0 40px rgb(0, 128, 0), 0 0 50px rgb(0, 0, 255), 0 0 60px rgb(75, 0, 130), 0 0 70px rgb(238, 130, 238), 0 0 80px rgb(255, 0, 255), 0 0 90px rgb(255, 0, 0);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 70px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radius: 38%;
+    animation: neon 2s infinite alternate-reverse;
+    background: linear-gradient(45deg, rgba(58, 141, 197, 0.774), rgba(188, 196, 202, 0.767));
+    backdrop-filter: blur(25px);
+}
+
+
+
+
+header {
+    font-size: 32px;
+    animation: rainbow 3s infinite; /* Apply rainbow animation */
+}
+
+@keyframes rainbow {
+    0% { color: #FF3CAC; } /* Rainbow colors */
+    25% { color: #784BA0; }
+    50% { color: #2B86C5; }
+    75% { color: #00A8C5; }
+    100% { color: #00C7B1; }
+}
+
+.form_wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.triangle{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.triangle.left{
+    transform: rotate(-90deg);
+}
+
+.triangle.right{
+    transform: rotate(90deg);
+}
+
+input{
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+
+button {
+    height: 30px;
+    padding: 0 20px;
+    background-color: darkred;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.5s; /* Smooth transition for color change */
+}
+
+button:hover {
+    animation: rainbow 1.5s infinite; /* Apply rainbow animation on hover */
+}
+
+@keyframes rainbow {
+    0% { color: red; } /* Rainbow colors */
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: purple; }
+}
+
+.triangle.btn{
+    background-color: darkred;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* Remove underline for the link */
+    transition: color 0.5s; /* Smooth transition for color change */
+}
+
+a:hover {
+    animation: rainbow 1.5s infinite; /* Apply rainbow animation on hover */
+}
+
+@keyframes rainbow {
+    0% { color: red; } /* Rainbow colors */
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: purple; }
+}
+
+
